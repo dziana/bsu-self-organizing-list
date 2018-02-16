@@ -13,7 +13,6 @@ class SelfOrganizedList {
     }
 
     insert(data) {
-        //
         var tempNode = new Node(data);
         tempNode.next = null;
         if(this.head!=null)
@@ -24,9 +23,7 @@ class SelfOrganizedList {
         }
         else
         {
-            //
             tempNode.prev = null;
-            //
             this.head = this.tail = tempNode;
         }
 
@@ -47,12 +44,6 @@ class SelfOrganizedList {
     at(index) {
         if(index < 0 || index >= this.size() || this.size()==0)
             return null;
-        if(index == 0)
-        {
-            return this.head.data;
-        }
-        else
-        {
             var tempNode = new Node(null);
             tempNode = this.head;
             for( var i = 0; i < index; i++)
@@ -60,7 +51,6 @@ class SelfOrganizedList {
                 tempNode = tempNode.next;
             }
             return tempNode.data;
-        }
     }
 
     findNode(data) {
@@ -126,7 +116,6 @@ class SelfOrganizedList {
         var tempNode = node;
         if(tempNode == this.head)
         {
-            //???
         }
         else if(tempNode == this.tail)
         {
